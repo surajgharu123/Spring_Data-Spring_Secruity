@@ -1,0 +1,30 @@
+server:
+  port: 9000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: "/stock-monitor"
+      
+ 
+      
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/stockdb
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate :
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  data:
+   mongodb:
+    host: localhost
+    port: 27017
+    database: mydb
+      
+      
